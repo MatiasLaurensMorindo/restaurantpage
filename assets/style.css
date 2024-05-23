@@ -1,0 +1,170 @@
+/* Estilos generales */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos del encabezado */
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+/* Estilos de las secciones */
+
+section {
+    padding: 50px 0;
+}
+
+section h1 {
+    text-align: center;
+}
+
+/* Estilos del pie de página */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Estilos de la página de menú */
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.menu-item img {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.menu-item-details {
+    flex: 1;
+}
+
+.menu-item-details h2 {
+    margin: 0 0 5px;
+}
+
+.menu-item-details p {
+    margin: 0;
+    color: #666;
+}
+
+.menu-item-price {
+    font-weight: bold;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+ /* Estilos específicos para el formulario de reserva */
+ #reserva-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#reserva-form div {
+    margin-bottom: 20px;
+}
+
+#reserva-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#reserva-form input[type="text"],
+#reserva-form input[type="email"],
+#reserva-form input[type="tel"],
+#reserva-form input[type="date"],
+#reserva-form input[type="number"],
+#reserva-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#reserva-form textarea {
+    height: 100px;
+}
+
+#reserva-form input[type="submit"] {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reserva-form input[type="submit"]:hover {
+    background-color: #f44336;
+}
+
+/* Estilos para mensajes de error */
+.error-message {
+    color: #f00;
+    margin-top: 5px;
+}
+
+/* Estilos específicos para la página de menú */
+
+section {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
