@@ -1,5 +1,4 @@
 /* Estilos generales */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,77 +12,92 @@ body {
 }
 
 /* Estilos del encabezado */
-
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #F20C49;
+    color: #0D0D0D;
     padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Ajusta el espaciado según sea necesario */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+header .nav-links li {
+    margin-right: 20px; /* Espacio entre los elementos de la lista */
+}
+
+header .nav-links li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+
+header .nav-links li a {
+    color: #0D0D0D;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+header .nav-links li a:hover {
+    background-color: #F28DA8;
+    border-radius: 5px;
+}
+
+/* Estilo para el logo */
+header .logo {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    margin-right: 20px; /* Espacio entre el logo y los botones */
+}
+
+
+header nav {
+    margin-left: auto; /* Empuja los elementos de navegación hacia la derecha */
 }
 
 header nav ul {
-    list-style: none;
-    padding: 0;
+    list-style-type: none;
     margin: 0;
+    padding: 0;
 }
 
 header nav ul li {
-    display: inline;
+    display: inline-block;
+    border-right: 1px solid #fff; /* Agrega un borde derecho */
+    padding-right: 10px; /* Espacio adicional entre botones */
+}
+
+header nav ul li:last-child {
+    border-right: none; /* Elimina el borde derecho del último elemento */
 }
 
 header nav ul li a {
-    color: #fff;
+    color: #0D0D0D;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
+}
+
+header nav ul li a:hover {
+    background-color: #F28DA8; /* Cambia el color de fondo al pasar el mouse */
+    border-radius: 5px; /* Agrega bordes redondeados */
 }
 
 /* Estilos de las secciones */
-
 section {
     padding: 50px 0;
-}
-
-/* slide del carrusel */
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-}
-
-.newSlides {
-    display: none;
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(242,141,168,0.8);
-}
-
-
-.newSlides:first-child {
-    display: block;
-}
-
-.newSlides img {
-    width: 100%;
 }
 
 section h1 {
@@ -91,52 +105,15 @@ section h1 {
 }
 
 /* Estilos del pie de página */
-
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #F20C49;
+    color: #0D0D0D;
     text-align: center;
     padding: 20px 0;
 }
 
-/* Estilos de la página de menú */
-
-.menu-item {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-}
-
-.menu-item img {
-    max-width: 100px;
-    margin-right: 20px;
-}
-
-.menu-item-details {
-    flex: 1;
-}
-
-.menu-item-details h2 {
-    margin: 0 0 5px;
-}
-
-.menu-item-details p {
-    margin: 0;
-    color: #666;
-}
-
-.menu-item-price {
-    font-weight: bold;
-}
-
-.back-link {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-}
- /* Estilos específicos para el formulario de reserva */
- #reserva-form {
+/* Estilos para el formulario de reserva */
+#reserva-form {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
@@ -192,12 +169,9 @@ footer {
 }
 
 /* Estilos específicos para la página de menú */
-
 section {
     padding: 20px;
 }
-
-
 
 table {
     width: 100%;
@@ -212,4 +186,68 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2;}
+    background-color: #f2f2f2;
+}
+
+/* slide del carrusel */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.newSlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(242,141,168,0.8);
+}
+
+.newSlides:first-child {
+    display: block;
+}
+
+.newSlides img {
+    width: 100%;
+}
+
+section h1 {
+    text-align: center;
+}
+
+/* Estilos específicos para el botón de navegación */
+.nav-button {
+    margin-left: 10px; /* Espacio entre los botones de navegación */
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #F28DA8; /* Cambia el color de fondo al pasar el mouse */
+}
