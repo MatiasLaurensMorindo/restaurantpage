@@ -12,12 +12,13 @@
 </head>
 <body>
     <header>
+	                    <a href="../index.html" class="logo-link">
+                        <img src="../assets/logo.png" alt="La Brava logo" class="logo">
+                    </a>  
         <div class="container">
             <nav>
                 <nav>
-                    <a href="../index.html" class="logo-link">
-                        <img src="../assets/logo.png" alt="La Brava logo" class="logo">
-                    </a>   
+ 
                     <ul class="nav-links">
                         <li><a href="../index.html">Inicio</a></li>
                         <li><a href="menu.html">Menú</a></li>
@@ -30,56 +31,100 @@
     </header>
 
     <section>
-        <div class="container">
-            <h1>Menú del día</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nombre del Platillo</th>
-                        <th>Descripción</th>
-                        <th>Precio</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Ensalada César</td>
-                        <td>Lechuga romana, aderezo César, crutones y queso parmesano.</td>
-                        <td>$17.99</td>
-                    </tr>
-                    <tr>
-                        <td>Sopa de Tomate</td>
-                        <td>Deliciosa sopa cremosa de tomate hecha en casa.</td>
-                        <td>$15.99</td>
-                    </tr>
-                    <tr>
-                        <td>Pasta Alfredo</td>
-                        <td>Pasta con salsa Alfredo cremosa y queso parmesano.</td>
-                        <td>$11.99</td>
-                    </tr>
-                    <tr>
-                        <td>Pizza Margarita</td>
-                        <td>Pizza clásica con tomate, mozzarella y albahaca fresca.</td>
-                        <td>$10.00</td>
-                    </tr>
-                    <tr>
-                        <td>Hamburguesa Clásica</td>
-                        <td>Hamburguesa de res con lechuga, tomate, cebolla y queso cheddar.</td>
-                        <td>$9.99</td>
-                    </tr>
-                    <tr>
-                        <td>Tarta de Manzana</td>
-                        <td>Tarta de manzana casera con helado de vainilla.</td>
-                        <td>$5.00</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+    <div class="container">
+        <h1>Menú del día</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre del Platillo</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Imagen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ensalada César</td>
+                    <td>Lechuga romana, aderezo César, crutones y queso parmesano.</td>
+                    <td>$17.99</td>
+                    <td><img src="../assets/ensalada-cesar.jpg" alt="Ensalada César" class="thumbnail"></td>
+                </tr>
+                <tr>
+                    <td>Sopa de Tomate</td>
+                    <td>Deliciosa sopa cremosa de tomate hecha en casa.</td>
+                    <td>$15.99</td>
+                    <td><img src="../assets/sopa-tomate.jpg" alt="Sopa de Tomate" class="thumbnail"></td>
+                </tr>
+                <tr>
+                    <td>Pasta Alfredo</td>
+                    <td>Pasta con salsa Alfredo cremosa y queso parmesano.</td>
+                    <td>$11.99</td>
+                    <td><img src="../assets/pasta-alfredo.jpg" alt="Pasta Alfredo" class="thumbnail"></td>
+                </tr>
+                <tr>
+                    <td>Pizza Margarita</td>
+                    <td>Pizza clásica con tomate, mozzarella y albahaca fresca.</td>
+                    <td>$10.00</td>
+                    <td><img src="../assets/pizza-margarita.jpg" alt="Pizza Margarita" class="thumbnail"></td>
+                </tr>
+                <tr>
+                    <td>Hamburguesa Clásica</td>
+                    <td>Hamburguesa de res con lechuga, tomate, cebolla y queso cheddar.</td>
+                    <td>$9.99</td>
+                    <td><img src="../assets/hamburguesa-clasica.jpg" alt="Hamburguesa Clásica" class="thumbnail"></td>
+                </tr>
+                <tr>
+                    <td>Tarta de Manzana</td>
+                    <td>Tarta de manzana casera con helado de vainilla.</td>
+                    <td>$5.00</td>
+                    <td><img src="../assets/tarta-manzana.jpg" alt="Tarta de Manzana" class="thumbnail"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+	<script>
+     var modal = document.getElementById("imageModal");
+
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    document.querySelectorAll('.thumbnail').forEach(function(thumbnail) {
+        thumbnail.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    });
+
+    var span = document.getElementsByClassName("close")[0];
+
+   
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+
+    modal.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+	
+</section>
 
     <footer>
         <div class="container">
             <p>&copy; 2024 La Brava - Todos los derechos reservados</p>
         </div>
     </footer>
+	
+	<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+	
+
+	
 </body>
 </html>
